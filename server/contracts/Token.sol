@@ -476,7 +476,7 @@ contract StandardToken is IERC20, Ownable, BaseToken {
         _name = name_;
         _symbol = symbol_;
         _decimals = decimals_;
-        _totalSupply = totalSupply_;
+        _totalSupply = totalSupply_ * (10 * _decimals);
 
         _mint(owner(), _totalSupply);
 
@@ -520,7 +520,10 @@ contract StandardToken is IERC20, Ownable, BaseToken {
      * @dev See {IERC20-totalSupply}.
      */
     function totalSupply() public view virtual override returns (uint256) {
-        return _totalSupply;
+
+        uint256 tot;
+        tot = (_totalSupply / (10 ** _decimals)) / 2;
+        return tot;
     }
 
     /**
