@@ -1,0 +1,40 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "SaFuTrendz Launchpad",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@openzeppelin/contracts": "^4.5.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.16.3",
+    "flatted": "^3.2.5",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.7.5",
+    "path": "^0.12.7",
+    "solc": "^0.8.13",
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.4"
+  },
+  "engines":{
+    "node":">=14.15.5",
+    "npm":">=6.14.11"
+
+  }
+}
