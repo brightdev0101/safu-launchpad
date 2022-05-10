@@ -13,10 +13,11 @@ node_modules/
 client/node_modules/
 
 # dotenv environment variables file
-.env
+
 
 # client files
-client/public
-client/src
+client/public/
+client/src/
+client/.env
 client/package.json
 client/package-lock.json

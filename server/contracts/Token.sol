@@ -476,7 +476,7 @@ contract StandardToken is IERC20, Ownable, BaseToken {
         _name = name_;
         _symbol = symbol_;
         _decimals = decimals_;
-        _totalSupply = totalSupply_ * 10**decimals_;
+        _totalSupply = totalSupply_;
 
         _mint(owner(), _totalSupply);
 
