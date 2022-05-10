@@ -18,7 +18,7 @@ router.get('/getTokenContract', (req, res) => {
 });
 
 router.get('/getTokenContractAbi', (req, res) => {
-	let bufferData = fs.readFileSync(__dirname + '\\tokenAbi.json');
+	let bufferData = fs.readFileSync(__dirname + '/tokenAbi.json');
 	let stData = bufferData.toString();
 	let data = JSON.parse(stData);
 	res.json(data);
@@ -26,7 +26,7 @@ router.get('/getTokenContractAbi', (req, res) => {
 
 router.get('/getTokenContractBytecode', (req, res) => {
 	console.log('tset');
-	let bufferData = fs.readFileSync(__dirname + '\\tokenBytecode.json');
+	let bufferData = fs.readFileSync(__dirname + '/tokenBytecode.json');
 	let stData = bufferData.toString();
 	let data = JSON.parse(stData);
 	res.json(data);
@@ -52,14 +52,14 @@ router.get('/getPresaleContract', (req, res) => {
 });
 
 router.get('/getPresaleContractAbi', (req, res) => {
-	let bufferData = fs.readFileSync(__dirname + '\\presaleAbi.json');
+	let bufferData = fs.readFileSync(__dirname + '/presaleAbi.json');
 	let stData = bufferData.toString();
 	let data = JSON.parse(stData);
 	res.json(data);
 });
 
 router.get('/getPresaleContractBytecode', (req, res) => {
-	let bufferData = fs.readFileSync(__dirname + '\\presaleBytecode.json');
+	let bufferData = fs.readFileSync(__dirname + '/presaleBytecode.json');
 	let stData = bufferData.toString();
 	let data = JSON.parse(stData);
 	res.json(data);
